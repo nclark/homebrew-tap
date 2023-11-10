@@ -1,10 +1,11 @@
-# Nclark Caddy-cloudflare
+## Note
+- Unmaintained
 
 ## How do I install these formulae?
 
-`brew install nclark/caddy-cloudflare/<formula>`
+`brew install nclark/homebrew-tap/caddy-cloudflare`
 
-Or `brew tap nclark/caddy-cloudflare` and then `brew install <formula>`.
+Or `brew tap nclark/homebrew-tap` and then `brew install caddy-cloudflare`.
 
 ## Documentation
 

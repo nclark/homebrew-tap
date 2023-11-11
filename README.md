@@ -3,9 +3,9 @@
 
 ## How do I install these formulae?
 
-`brew install nclark/homebrew-tap/caddy-cloudflare`
+`brew install nclark/tap/caddy-cloudflare`
 
-Or `brew tap nclark/homebrew-tap` and then `brew install caddy-cloudflare`.
+Or `brew tap nclark/tap` and then `brew install caddy-cloudflare`.
 
 ## Documentation
 

@@ -1,8 +1,8 @@
 class CaddyCloudflare < Formula
   desc "Powerful, enterprise-ready, open source web server with automatic HTTPS and also cloudflare"
   homepage "https://caddyserver.com/"
-  url "https://github.com/caddyserver/caddy/archive/v2.7.6.tar.gz"
-  sha256 "e1c524fc4f4bd2b0d39df51679d9d065bb811e381b7e4e51466ba39a0083e3ed"
+  url "https://github.com/caddyserver/caddy/archive/v2.10.2.tar.gz"
+  sha256 "f63f46b7ae68ced0a5c2e31df1b6dfc7656117d162a1bc7fed4bd4afd14ddc8f"
   license "Apache-2.0"
   head "https://github.com/caddyserver/caddy.git", branch: "master"
 

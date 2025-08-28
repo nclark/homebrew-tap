@@ -1,23 +1,24 @@
 class CaddyCloudflare < Formula
   desc "Powerful, enterprise-ready, open source web server with automatic HTTPS and also cloudflare"
   homepage "https://caddyserver.com/"
-  url "https://github.com/caddyserver/caddy/archive/v2.7.5.tar.gz"
-  sha256 "eeaecc1ea18b7aa37ece168562beb1ab592767cbedfaa411040ae0301aaeeef1"
+  url "https://github.com/caddyserver/caddy/archive/v2.8.4.tar.gz"
+  sha256 "5c2e95ad9e688a18dd9d9099c8c132331e01e0bebd401183e8d9123372cf4fcc"
   license "Apache-2.0"
   head "https://github.com/caddyserver/caddy.git", branch: "master"
 
   depends_on "go" => :build
 
   resource "xcaddy" do
-    url "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.3.5.tar.gz"
-    sha256 "41188931a3346787f9f4bc9b0f57db1ba59ab228113dcf0c91382e40960ee783"
+    url "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.4.4.tar.gz"
+    sha256 "5ba32eec2388638cebbe1df861ea223c35074528af6a0424f07e436f07adce72"
   end
 
   def install
     revision = build.head? ? version.commit : "v#{version}"
 
     resource("xcaddy").stage do
-      system "go", "run", "cmd/xcaddy/main.go", "build", revision, "--with", "github.com/caddy-dns/cloudflare", "--output", bin/"caddy"
+      system "go", "run", "cmd/xcaddy/main.go", "build", revision, "--with", "github.com/caddy-dns/cloudflare", "--output",
+bin/"caddy"
     end
 
     generate_completions_from_executable("go", "run", "cmd/caddy/main.go", "completion")
@@ -56,4 +57,3 @@ class CaddyCloudflare < Formula
     assert_match version.to_s, shell_output("#{bin}/caddy version")
   end
 end
-
